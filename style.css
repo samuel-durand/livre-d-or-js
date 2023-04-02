@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background-color: #0b0d15;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1, h2, label, strong {
+    color: #ff516d;
+}
+form {
+    margin-bottom: 30px;
+}
+.commentaire {
+    background-color: #161a28;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.1rem;
+    height: 200px;
+    margin-bottom: 10px;
+    padding: 10px;
+    resize: none;
+}
+
+.commentaires-liste {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.commentaire-item {
+    background-color: #21264a;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.commentaire-item strong {
+    font-size: 1.2rem;
+}
+.commentaire-item small {
+    color: #ccc;
+    font-size: 0.8rem;
+}
+
+
+/* Police de caractère personnalisée */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+/* Titres */
+h1, h2 {
+  color:#ff516d;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Formulaire */
+form {
+  margin-top: 20px;
+}
+
+label {
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-bottom: 2px solid #29abe2;
+  outline: none;
+}
+
+button[type="submit"],
+button {
+  background-color: #29abe2;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover,
+button:hover {
+  background-color: #0f0f23;
+  color: #29abe2;
+}
+
+#btn-deconnexion {
+  background-color: transparent;
+  border: 2px solid #21264a;
+  border-radius: 25px;
+  color: #29abe2;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+#btn-deconnexion:hover {
+  background-color: #21264a;
+  color: #fff;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+
+/*form register*/
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #21264a;
+  border:5px solid #29abe2;
+  margin: 220px auto;
+  border-radius: 5px;
+  width: 50%;
+  height: 300px;
+}
+
+main form {
+  width: 80%;
+
+}
+
+
+/* message*/
+
+#welcome{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 300px;
+  font-size: 20px;
+
+}
+
+
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+footer div ul li  {
+  text-decoration: none;
+}
+
+a {
+  color: white;
+  transition: 0.3s;
+}
+a:hover {
+  color: #29abe2;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+footer div ul  {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  margin: 15px;
+  background-color: #0B0D15;
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  color: #ffffff;
+}
