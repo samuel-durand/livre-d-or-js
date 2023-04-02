@@ -1,7 +1,8 @@
 <?php 
+include('config.php');
+session_start();
 
 // Vérification de la session de connexion
-session_start();
 
 if (!isset($_SESSION["login"])) {
     header("Location: login.php");
@@ -9,6 +10,7 @@ if (!isset($_SESSION["login"])) {
 }
 
 $login = $_SESSION["login"];
+
 // Traitement du formulaire de commentaire
 if (isset($_POST["commentaire"])) {
     $commentaire = $_POST["commentaire"];
