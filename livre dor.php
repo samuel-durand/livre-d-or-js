@@ -1,4 +1,5 @@
-<?php 
+<?php
+require_once "config.php";
 
 // Vérification de la session de connexion
 session_start();
@@ -9,6 +10,7 @@ if (!isset($_SESSION["login"])) {
 }
 
 $login = $_SESSION["login"];
+
 // Traitement du formulaire de commentaire
 if (isset($_POST["commentaire"])) {
     $commentaire = $_POST["commentaire"];
@@ -25,5 +27,32 @@ if (isset($_POST["commentaire"])) {
 $stmt = $pdo->prepare("SELECT commentaires.id, commentaire, id_utilisateur, date, login FROM commentaires INNER JOIN users ON commentaires.id_utilisateur = users.id ORDER BY date DESC");
 $stmt->execute();
 $commentaires = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
 ?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Livre d'or</title>
+</head>
+<body>
+    <h1>Livre d'or</h1>
+    
+    <form action="" method="POST">
+        <label for="commentaire">Commentaire :</label><br>
+        <textarea id="commentaire" name="commentaire" required></textarea><br><br>
+        
+        <input type="submit" value="Poster">
+    </form>
+    
+    <h2>Commentaires</h2>
+    <ul>
+        <?php foreach ($commentaires as $commentaire) { ?>
+            <li>
+                <strong><?php echo $commentaire["login"]; ?></strong> le <?php echo $commentaire["date"]; ?><br>
+                <?php echo $commentaire["commentaire"]; ?>
+            </li>
+        <?php } ?>
+    </ul>
+</body>
+</html>
