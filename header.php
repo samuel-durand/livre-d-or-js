@@ -15,24 +15,24 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php">Accueil</a>
+                    <a class="nav-link" href="index.php" >Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="livre dor.php">Livre d'or</a>
+                    <a class="nav-link" href="livre dor.php" >Livre d'or</a>
                 </li>
                 <?php if (isset($_SESSION['login'])): ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="profil.php">Profil</a>
+                    <a class="nav-link" href="profil.php" >Profil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="logout.php">Se déconnecter</a>
+                    <a class="nav-link" href="logout.php" >Se déconnecter</a>
                 </li>
                 <?php else: ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="register.php">Inscription</a>
+                    <a class="nav-link" href="register.php" >Inscription</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.php">Se connecter</a>
+                    <a class="nav-link" href="login.php" >Se connecter</a>
                 </li>
                 <?php endif; ?>                  
             </ul>

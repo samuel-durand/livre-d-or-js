@@ -12,7 +12,7 @@ session_start();
     <link rel="stylesheet" href="style.css">
     <title>accueil</title>
 </head>
-<body>
+<body >
 
 <?php include ('header.php') ?>
 
