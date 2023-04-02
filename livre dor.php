@@ -3,13 +3,12 @@
 include('commentaire.action.php');
 
 
-
 if (!isset($_SESSION["login"])) {
-    header("Location: login.php");
-    exit;
+    $commentaire_disable = true;
+} else {
+    $commentaire_disable = false;
+    $login = $_SESSION["login"];
 }
-
-$login = $_SESSION["login"];
 
 
 ?>
@@ -21,6 +20,8 @@ $login = $_SESSION["login"];
     <title>Livre d'or</title>
 </head>
 <body>
+<?php include ('header.php') ?>
+
     <h1>Livre d'or</h1>
     
     <form id="commentaire-form">

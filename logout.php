@@ -1,11 +1,11 @@
 <?php
-// Démarrage de la session
 session_start();
 
-// Destruction de la session
-session_unset();
-session_destroy();
+// Déconnexion de l'utilisateur
+unset($_SESSION["login"]);
 
 // Redirection vers la page de connexion
-exit();
+header("Location: login.php");
+exit;
+
 ?>

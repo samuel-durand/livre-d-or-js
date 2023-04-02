@@ -11,8 +11,9 @@
     <nav>
         <ul>
             <li><a href="index.php">Accueil</a></li>
+            <li><a href="livre dor.php">livre d'or</a></li>
             <?php if (isset($_SESSION['login'])): ?>
-                <li><a href="livre dor.php">livre d'or</a></li>
+                <li><a href="profil.php">profil</a></li>
                 <li><a href="logout.php">Se déconnecter</a></li>
             <?php else: ?>
                 <li><a href="register.php">Inscription</a></li>
