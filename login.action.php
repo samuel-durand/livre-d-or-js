@@ -9,8 +9,8 @@ session_start();
 // Vérification si les données ont été soumises
 if (isset($_POST['login']) && isset($_POST['password'])) {
   // Récupération des données soumises dans le formulaire
-  $login = $_POST['login'];
-  $password = $_POST['password'];
+  $login = htmlspecialchars($_POST['login'], ENT_QUOTES) ;
+  $password = htmlspecialchars($_POST['password'], ENT_QUOTES);
 
   // Recherche de l'utilisateur correspondant dans la base de données
   $stmt = $pdo->prepare('SELECT * FROM users WHERE login = :login');
