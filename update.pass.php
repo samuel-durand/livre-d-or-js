@@ -5,8 +5,8 @@ include('config.php');
 // Vérification si les données ont été soumises
 if (isset($_POST['current_password']) && isset($_POST['new_password'])) {
   // Récupération des données soumises dans le formulaire
-  $currentPassword = $_POST['current_password'];
-  $newPassword = $_POST['new_password'];
+  $currentPassword = htmlspecialchars($_POST['current_password'], ENT_QUOTES);
+  $newPassword = htmlspecialchars($_POST['new_password'], ENT_QUOTES);
   $login = $_SESSION['login'];
 
   // Recherche de l'utilisateur correspondant dans la base de données

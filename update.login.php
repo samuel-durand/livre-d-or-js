@@ -5,7 +5,7 @@ include('config.php');
 // Vérification si les données ont été soumises
 if (isset($_POST['login'])) {
   // Récupération des données soumises dans le formulaire
-  $newLogin = $_POST['login'];
+  $newLogin = htmlspecialchars($_POST['login'], ENT_QUOTES) ;
   $oldLogin = $_SESSION['login'];
 
   // Vérification si le nouveau login est déjà utilisé

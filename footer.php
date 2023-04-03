@@ -10,9 +10,9 @@
 <footer>
     <div>
         <ul>
-            <li><a href="register.php">S'inscire</a></li>
+            <li><a href="register.php">S'inscrire</a></li>
             <li><a href="login.php">login</a></li>
-            <li><a href="livre dor">livre dor</a></li>
+            <li><a href="livre dor.php">livre dor</a></li>
             <li><a href="https://github.com/samuel-durand/livre-d-or-js" target="_blank">lien du projet</a></li>
         </ul>
     </div>
