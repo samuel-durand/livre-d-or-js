@@ -1,7 +1,6 @@
 <?php 
 
 include('config.php');
-require_once('register.action.php');
 
 ?>
 

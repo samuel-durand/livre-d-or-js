@@ -1,7 +1,6 @@
 <?php 
 
 include('config.php');
-include('login.action.php');
 ?>
 
 
