@@ -21,9 +21,9 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
 
     exit();
   } else {
-    // Si l'utilisateur existe déjà, on affiche un message d'erreur
-    echo 'L\'utilisateur existe déjà.';
+    // Si l'utilisateur existe déjà, on retourne un message d'erreur encodé en JSON
+    $response = ['message' => 'L\'utilisateur existe déjà.'];
+    echo json_encode($response);
   }
 }
-
 ?>

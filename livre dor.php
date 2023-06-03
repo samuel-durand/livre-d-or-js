@@ -1,11 +1,5 @@
 <?php
-
 include('commentaire.action.php');
-
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -13,28 +7,31 @@ include('commentaire.action.php');
 <head>
     <meta charset="UTF-8">
     <title>Livre d'or</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="styls.css">
+    <script defer src="comment.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="footer.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php include ('header.php') ?>
+    <?php include('header.php') ?>
 
-    <div class="container mt-5">
-        <h1 class="mb-4">Livre d'or</h1>
-        
+    <div class="container mx-auto mt-5 px-4">
+        <h1 class="mb-4 text-3xl font-bold">Livre d'or</h1>
+
         <?php if (isset($_SESSION['login'])): ?>
         <form id="commentaire-form">
-            <div class="form-group">
-                <label for="commentaire">Commentaire :</label>
+            <div class="mb-4">
+                <label for="commentaire" class="text-lg font-semibold">Commentaire :</label>
                 <textarea id="commentaire" name="commentaire" class="form-control commentaire" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Poster</button>
+            <button type="submit" id="submit-button" class="btn btn-primary">Poster</button>
         </form>
         <?php else: ?>
         <p>Connectez-vous pour laisser un commentaire.</p>
         <?php endif; ?>
-        
-        <h2 class="mt-5 mb-4">Commentaires</h2>
+
+        <h2 class="mt-5 mb-4 text-2xl font-bold">Commentaires</h2>
         <ul class="commentaires-liste">
             <?php foreach ($commentaires as $commentaire) { ?>
             <li class="commentaire-item">
@@ -45,13 +42,13 @@ include('commentaire.action.php');
             <?php } ?>
         </ul>
     </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com/2.2.19/tailwind.min.js"></script>
+
     <?php include('footer.php') ?>
 
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="comment.js"></script>
+
 </body>
 </html>
-

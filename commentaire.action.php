@@ -1,10 +1,9 @@
-<?php 
+<?php
 include('config.php');
 session_start();
 date_default_timezone_set("Europe/Paris");
 
 // Vérification de la session de connexion
-
 if (!isset($_SESSION["login"])) {
     $commentaire_disable = true;
 } else {
@@ -23,11 +22,14 @@ if (isset($_POST["commentaire"])) {
     echo "Commentaire inséré avec succès.";
 }
 
-
 // Récupération des commentaires depuis la base de données avec les informations des utilisateurs
 $stmt = $pdo->prepare("SELECT commentaires.id, commentaire, id_utilisateur, date, login FROM commentaires INNER JOIN users ON commentaires.id_utilisateur = users.id ORDER BY date DESC");
 $stmt->execute();
 $commentaires = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Encodage de la réponse en JSON
+$jsonResponse = json_encode($commentaires);
+
 
 
 ?>

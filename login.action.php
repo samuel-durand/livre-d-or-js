@@ -22,11 +22,15 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
     // Sauvegarde de l'utilisateur connecté dans la session
     $_SESSION['login'] = $login;
 
-    // Affichage du message de bienvenue
-    echo 'Bienvenue, ' . $login . ' !';
+    // Redirection vers la page souhaitée
+    header('Location: livre dor.php');
+    exit;
   } else {
-    // Affichage du message d'erreur
-    echo 'Mauvais login ou mot de passe.';
+    // Création du tableau de réponse
+    $response = ['message' => 'Mauvais login ou mot de passe.'];
+
+    // Encodage de la réponse en JSON et envoi au client
+    echo json_encode($response);
   }
 }
 

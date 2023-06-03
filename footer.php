@@ -1,22 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<footer>
-    <div>
-        <ul>
-            <li><a href="register.php">S'inscrire</a></li>
-            <li><a href="login.php">login</a></li>
-            <li><a href="livre dor.php">livre dor</a></li>
-            <li><a href="https://github.com/samuel-durand/livre-d-or-js" target="_blank">lien du projet</a></li>
-        </ul>
+<footer class="bg-gray-900">
+    <div class="container mx-auto py-4">
+      <ul class="flex flex-wrap justify-center">
+        <li class="mx-2 my-1">
+          <a href="register.php" class="text-white hover:text-blue-500 transition-colors">S'inscrire</a>
+        </li>
+        <li class="mx-2 my-1">
+          <a href="login.php" class="text-white hover:text-blue-500 transition-colors">Login</a>
+        </li>
+        <li class="mx-2 my-1">
+          <a href="livre_dor.php" class="text-white hover:text-blue-500 transition-colors">Livre d'or</a>
+        </li>
+        <li class="mx-2 my-1">
+          <a href="https://github.com/samuel-durand/livre-d-or-js" target="_blank" class="text-white hover:text-blue-500 transition-colors">Lien du projet</a>
+        </li>
+      </ul>
     </div>
-</footer>
-    
-</body>
-</html>
+  </footer>
