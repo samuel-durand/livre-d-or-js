@@ -19,16 +19,9 @@ if (isset($_POST['current_password']) && isset($_POST['new_password'])) {
     // Le mot de passe actuel est correct, on peut le mettre à jour
     $stmt = $pdo->prepare('UPDATE users SET password = :newPassword WHERE login = :login');
     $stmt->execute(['newPassword' => password_hash($newPassword, PASSWORD_DEFAULT), 'login' => $login]);
-    $message = 'Le mot de passe a bien été mis à jour.';
-    $response = ['message' => $message];
-    echo json_encode($response);
   } else {
     // Le mot de passe actuel est incorrect
-    $error = 'Le mot de passe actuel est incorrect.';
-    $response = ['error' => $error];
-    echo json_encode($response);
   }
 }
-
-
 ?>
+

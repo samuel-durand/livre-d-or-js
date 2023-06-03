@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "tailwindcss": "^3.3.2"
+  },
+  "name": "livre-d-or",
+  "version": "1.0.0",
+  "main": "comment.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

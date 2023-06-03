@@ -1,31 +1,19 @@
-document.getElementById("mon-formulaire").addEventListener("submit", async function (e) {
-  e.preventDefault();
+document.querySelector('#mon-formulaire').addEventListener('submit', (event) => {
+  event.preventDefault(); // Empêche le rechargement de la page
 
-  const formData = new FormData(e.target);
-  formData.append("submit", "true"); 
-  const response = await fetch("login.action.php", {
-    method: "POST",
+  // Récupération des données du formulaire
+  const formData = new FormData(event.target);
+
+  // Envoi de la requête
+  fetch('login.action.php', {
+    method: 'POST',
     body: formData
+  })
+  .then(response => {
+    // Redirection vers la page désirée
+    window.location.replace("profil.php");
+  })
+  .catch(error => {
+    console.error(error);
   });
-
-  if (response.ok) {
-    const result = await response.json();
-    console.log(result);
-
-    if (result.success) {
-      showAlert("Vous êtes coonecter !");
-      window.location.replace("livre dor.php");
-    } else {
-      showAlert(result.message);
-    }
-  } else {
-    console.error("Erreur lors de l'envoi du formulaire:", response.statusText);
-  }
 });
-
-function showAlert(message) {
-  alert(message);
-}
-
-
-

@@ -13,7 +13,7 @@ session_start();
     <script src="footer.js"></script>
     <title>accueil</title>
 </head>
-<body class="bg-gray-900 text-white">
+<body class=" text-white">
 
 <?php include ('header.php') ?>
 

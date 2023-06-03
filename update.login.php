@@ -15,13 +15,11 @@ if (isset($_POST['login'])) {
 
   if ($user) {
     // Le nouveau login est déjà utilisé
-    echo 'Ce login est déjà utilisé.';
   } else {
     // Le nouveau login n'est pas encore utilisé, on peut le mettre à jour
     $stmt = $pdo->prepare('UPDATE users SET login = :newLogin WHERE login = :oldLogin');
     $stmt->execute(['newLogin' => $newLogin, 'oldLogin' => $oldLogin]);
     $_SESSION['login'] = $newLogin; // Mise à jour du login dans la session
-    echo 'Le login a bien été mis à jour.';
   }
 }
 ?>

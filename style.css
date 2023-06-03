@@ -138,23 +138,7 @@ h1 {
 
 /*form register*/
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background: #21264a;
-  border:5px solid #29abe2;
-  margin: 200px auto;
-  border-radius: 5px;
-  width: 50%;
-  height: 300px;
-}
 
-main form {
-  width: 80%;
-
-}
 
 
 /* message*/

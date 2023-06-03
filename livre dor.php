@@ -1,6 +1,14 @@
 <?php
-include('commentaire.action.php');
+include('config.php');
+session_start();
+date_default_timezone_set("Europe/Paris");
+
+// Récupération des commentaires depuis la base de données avec les informations des utilisateurs
+$stmt = $pdo->prepare("SELECT commentaires.id, commentaire, id_utilisateur, date, login FROM commentaires INNER JOIN users ON commentaires.id_utilisateur = users.id ORDER BY date DESC");
+$stmt->execute();
+$commentaires = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -52,3 +60,4 @@ include('commentaire.action.php');
 
 </body>
 </html>
+
